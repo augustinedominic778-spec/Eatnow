@@ -1,0 +1,78 @@
+/* Filter & Search Styles */
+.menu-controls {
+    padding: 40px 8% 20px;
+    text-align: center;
+}
+
+#foodSearch {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 25px;
+    border: 2px solid #eee;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: var(--transition);
+}
+
+#foodSearch:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    margin: 5px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-yellow);
+    color: var(--dark-bg);
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    right: -400px; /* Hidden by default */
+    top: 0;
+    width: 380px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 2000;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--dark-bg);
+    color: var(--primary-yellow);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}

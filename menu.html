@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <section class="menu-controls">
+    <div class="search-container">
+        <input type="text" id="foodSearch" placeholder="Search for your favorite dish...">
+    </div>
+    <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="Burgers">Burgers</button>
+        <button class="filter-btn" data-filter="Pizza">Pizza</button>
+        <button class="filter-btn" data-filter="Salads">Salads</button>
+        <button class="filter-btn" data-filter="Desserts">Desserts</button>
+    </div>
+</section>
+
+<section id="menu" class="product-grid">
+    </section>
+
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Order</h3>
+        <span class="close-cart" onclick="toggleCart()">&times;</span>
+    </div>
+    <div id="cart-items-container">
+        </div>
+    <div class="cart-footer">
+        <div class="total-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+        </div>
+        <button class="checkout-btn" onclick="processOrder()">Place Order</button>
+    </div>
+</div>
+</body>
+</html>
