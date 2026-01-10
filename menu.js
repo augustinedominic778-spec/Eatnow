@@ -1,83 +1,75 @@
 const foodItems = [
-    { id: 1, name: "Golden Glaze Burger", price: 14.00, category: "Burgers", img: "burger1.jpg" },
-    { id: 2, name: "Pepperoni Feast", price: 18.00, category: "Pizza", img: "pizza1.jpg" },
-    { id: 3, name: "Quinoa Power Bowl", price: 12.50, category: "Salads", img: "salad1.jpg" },
-    { id: 4, name: "Double Truffle Burger", price: 16.00, category: "Burgers", img: "burger2.jpg" },
-    { id: 5, name: "Margherita Gold", price: 15.00, category: "Pizza", img: "pizza2.jpg" },
-    { id: 6, name: "Chocolate Lava Cake", price: 8.00, category: "Desserts", img: "cake1.jpg" }
+    {
+        id: 1,
+        name: "Prime Ribeye Steak",
+        category: "Main Course",
+        price: 34.00,
+        rating: 4.9,
+        img: "https://images.unsplash.com/photo-1546241072-48010ad28c2c?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 2,
+        name: "Truffle Tagliatelle",
+        category: "Pasta",
+        price: 22.50,
+        rating: 4.8,
+        img: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 3,
+        name: "Gourmet Avocado Toast",
+        category: "Breakfast",
+        price: 14.00,
+        rating: 4.7,
+        img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 4,
+        name: "Salmon Sashimi Plate",
+        category: "Seafood",
+        price: 28.00,
+        rating: 4.9,
+        img: "https://images.unsplash.com/photo-1534482421-0d45aa4e5ade?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 5,
+        name: "Caramel Glazed Donut",
+        category: "Desserts",
+        price: 6.50,
+        rating: 4.6,
+        img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 6,
+        name: "Lemon Herb Chicken",
+        category: "Main Course",
+        price: 19.00,
+        rating: 4.8,
+        img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80"
+    }
 ];
 
-let cart = [];
-
-// Initialize Menu
-function renderMenu(items) {
-    const menuGrid = document.getElementById('menu');
-    menuGrid.innerHTML = items.map(item => `
+function renderMenu() {
+    const grid = document.getElementById('food-grid');
+    grid.innerHTML = foodItems.map(item => `
         <div class="food-card">
+            <div class="price-tag"><span>$</span>${item.price.toFixed(2)}</div>
+            <div class="image-container">
+                <img src="${item.img}" alt="${item.name}" class="food-image">
+            </div>
             <div class="food-info">
-                <span class="category-tag">${item.category}</span>
-                <h3>${item.name}</h3>
-                <p class="price">$${item.price.toFixed(2)}</p>
-                <button class="add-btn" onclick="addToCart(${item.id})">Add to Order</button>
+                <span class="food-category">${item.category}</span>
+                <h3 class="food-name">${item.name}</h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i> ${item.rating} (50+ reviews)
+                </div>
+                <button class="order-btn" onclick="addToCart(${item.id})">
+                    <i class="fas fa-plus"></i> Add to Order
+                </button>
             </div>
         </div>
     `).join('');
 }
 
-// Filter Logic
-const filterBtns = document.querySelectorAll('.filter-btn');
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelector('.active').classList.remove('active');
-        btn.classList.add('active');
-        const category = btn.getAttribute('data-filter');
-        const filtered = category === 'all' ? foodItems : foodItems.filter(f => f.category === category);
-        renderMenu(filtered);
-    });
-});
-
-// Cart Logic
-function addToCart(id) {
-    const item = foodItems.find(p => p.id === id);
-    cart.push(item);
-    updateCartUI();
-    toggleCart(true); // Open sidebar when item added
-}
-
-function updateCartUI() {
-    const container = document.getElementById('cart-items-container');
-    const totalEl = document.getElementById('cart-subtotal');
-    const countEl = document.getElementById('cart-count');
-    
-    container.innerHTML = cart.map((item, index) => `
-        <div class="cart-item">
-            <div>
-                <h4>${item.name}</h4>
-                <small>$${item.price}</small>
-            </div>
-            <button onclick="removeFromCart(${index})" style="background:none; border:none; color:red; cursor:pointer;">Remove</button>
-        </div>
-    `).join('');
-
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-    totalEl.innerText = `$${total.toFixed(2)}`;
-    countEl.innerText = cart.length;
-}
-
-function toggleCart(open = null) {
-    const sidebar = document.getElementById('cart-sidebar');
-    if (open === true) sidebar.classList.add('active');
-    else if (open === false) sidebar.classList.remove('active');
-    else sidebar.classList.toggle('active');
-}
-
-function processOrder() {
-    if(cart.length === 0) return alert("Your cart is empty!");
-    alert("Order Placed Successfully! Your chef is preparing your meal.");
-    cart = [];
-    updateCartUI();
-    toggleCart(false);
-}
-
-// Initial Load
-renderMenu(foodItems);
+// Call function on load
+renderMenu();
