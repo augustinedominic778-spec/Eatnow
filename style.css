@@ -239,17 +239,16 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
+        flex-wrap: wrap;
+        padding: 15px 5%;
     }
 
     .nav-links {
-        flex-direction: column;
+        order: 3;
         width: 100%;
-        text-align: center;
-        gap: 15px;
-        padding: 0;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 20px;
     }
 
     .nav-links li {
@@ -257,8 +256,11 @@ body {
     }
 
     .nav-actions {
-        width: 100%;
-        justify-content: center;
-        margin-top: 5px;
+        gap: 10px;
+    }
+
+    .btn-signup {
+        padding: 8px 16px;
+        font-size: 0.85rem;
     }
 }
