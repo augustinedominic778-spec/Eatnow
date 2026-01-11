@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | EatNow Gourmet</title>
+    <link rel="stylesheet" href="auth-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-page-wrapper">
+        <a href="index.html" class="auth-back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+        <div class="auth-card">
+            <div class="auth-brand">
+                <a href="index.html" class="logo">Eat<span>Now</span></a>
+            </div>
+            
+            <h2>Join the Club</h2>
+            <p class="subtitle">Discover the finest meals delivered to your door.</p>
+
+            <form id="signupForm">
+                <div class="input-field">
+                    <label>Full Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="name@example.com" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Create Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="regPass" placeholder="Min. 8 characters" required>
+                        <i class="fa-regular fa-eye toggle-password" onclick="togglePass('regPass')"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-auth-main">Create Account</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

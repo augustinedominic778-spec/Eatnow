@@ -155,3 +155,83 @@ body {
     background: var(--primary-yellow);
     color: var(--dark-bg);
 }
+/* Navigation Bar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes content to the edges */
+    align-items: center;
+    padding: 15px 5%;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Grouping Cart and Buttons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between cart and buttons */
+}
+
+.auth-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 1px solid #eee; /* Subtle separator line */
+    padding-left: 25px;
+}
+
+/* Login Button - Minimalist */
+.btn-login {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    color: var(--primary-yellow);
+}
+
+/* Signup Button - Sophisticated Yellow */
+.btn-signup {
+    text-decoration: none;
+    background: var(--primary-yellow);
+    color: #1a1a1a;
+    padding: 10px 24px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+    background: var(--white);
+    color: var(--primary-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Cart Icon styling for better alignment */
+.cart-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    color: #1a1a1a;
+}
+
+#cart-count {
+    background: var(--primary-yellow);
+    color: #000;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-weight: bold;
+}

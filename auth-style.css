@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+:root {
+    --primary-yellow: #FFC107;
+    --dark-bg: #f4f6f8;
+    --card-bg: #ffffff;
+    --input-bg: #f1f3f5;
+    --text-main: #1a1a1a;
+    --text-dim: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-page-wrapper {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.auth-back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: var(--primary-yellow);
+    color: var(--text-main);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+}
+
+.auth-back-btn:hover {
+    background: var(--card-bg);
+    color: var(--primary-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.auth-card {
+    background: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 32px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-brand {
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.logo span {
+    color: var(--primary-yellow);
+}
+
+h2 {
+    color: var(--text-main);
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+}
+
+/* Form Styles */
+.input-field {
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.input-field label {
+    display: block;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: var(--text-dim);
+}
+
+.input-wrapper input {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid transparent;
+    padding: 14px 15px 14px 45px;
+    border-radius: 14px;
+    color: var(--text-main);
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+}
+
+.toggle-password {
+    left: auto !important;
+    right: 15px;
+    cursor: pointer;
+}
+
+.forgot-pass {
+    display: block;
+    text-align: right;
+    color: var(--primary-yellow);
+    font-size: 0.8rem;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+/* Main Button */
+.btn-auth-main {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-yellow);
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-auth-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+}
+
+.auth-footer {
+    margin-top: 30px;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: var(--primary-yellow);
+    text-decoration: none;
+    font-weight: 600;
+}

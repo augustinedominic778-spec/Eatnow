@@ -1,4 +1,37 @@
+:root {
+    --primary-yellow: #FFC107;
+    --dark-bg: #1a1a1a;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
 /* Container & Title */
+.back-link {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: var(--primary-yellow);
+    color: #1a1a1a;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.back-link:hover {
+    background: #ffffff;
+    color: var(--primary-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
 .menu-section {
     padding: 80px 8%;
     background-color: #fafafa;
@@ -105,8 +138,8 @@
     width: 100%;
     padding: 12px;
     border: none;
-    background: #1a1a1a;
-    color: #fff;
+    background: #f6db29;
+    color: #0b0b0b;
     font-weight: 600;
     border-radius: 12px;
     cursor: pointer;
@@ -120,4 +153,36 @@
 .order-btn:hover {
     background: var(--primary-yellow);
     color: #1a1a1a;
+}
+/* Placeholder background while image loads */
+.image-container {
+    position: relative;
+    height: 250px;
+    background-color: #f0f0f0; /* Light gray background */
+    overflow: hidden;
+}
+
+/* Ensure the image covers the container properly */
+.food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sophisticated "Sold Out" or "New" Ribbon (Optional) */
+.food-card::before {
+    content: "New Dish";
+    position: absolute;
+    top: 20px;
+    left: -35px;
+    background: var(--primary-yellow);
+    color: #000;
+    padding: 5px 40px;
+    transform: rotate(-45deg);
+    font-size: 0.7rem;
+    font-weight: bold;
+    z-index: 15;
+    text-transform: uppercase;
 }

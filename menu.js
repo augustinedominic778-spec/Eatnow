@@ -1,11 +1,12 @@
 const foodItems = [
     {
         id: 1,
-        name: "Prime Ribeye Steak",
+        name: "Premium Ribeye Steak",
         category: "Main Course",
         price: 34.00,
         rating: 4.9,
-        img: "https://images.unsplash.com/photo-1546241072-48010ad28c2c?auto=format&fit=crop&w=600&q=80"
+        // Updated reliable link
+        img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 2,
@@ -13,49 +14,39 @@ const foodItems = [
         category: "Pasta",
         price: 22.50,
         rating: 4.8,
-        img: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=600&q=80"
+        img: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 3,
-        name: "Gourmet Avocado Toast",
-        category: "Breakfast",
-        price: 14.00,
+        name: "Mediterranean Salad",
+        category: "Healthy",
+        price: 16.00,
         rating: 4.7,
-        img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+        img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 4,
-        name: "Salmon Sashimi Plate",
-        category: "Seafood",
-        price: 28.00,
-        rating: 4.9,
-        img: "https://images.unsplash.com/photo-1534482421-0d45aa4e5ade?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-        id: 5,
-        name: "Caramel Glazed Donut",
-        category: "Desserts",
-        price: 6.50,
-        rating: 4.6,
-        img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-        id: 6,
-        name: "Lemon Herb Chicken",
-        category: "Main Course",
+        name: "Classic Wagyu Burger",
+        category: "Burgers",
         price: 19.00,
-        rating: 4.8,
-        img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80"
+        rating: 4.9,
+        img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
     }
 ];
 
+// This function now includes a "fallback" image if the link breaks
 function renderMenu() {
     const grid = document.getElementById('food-grid');
+    const placeholder = "https://via.placeholder.com/600x400?text=Delicious+Meal+Coming+Soon";
+
     grid.innerHTML = foodItems.map(item => `
         <div class="food-card">
             <div class="price-tag"><span>$</span>${item.price.toFixed(2)}</div>
             <div class="image-container">
-                <img src="${item.img}" alt="${item.name}" class="food-image">
+                <img src="${item.img}" 
+                     alt="${item.name}" 
+                     class="food-image" 
+                     onerror="this.src='${placeholder}';">
             </div>
             <div class="food-info">
                 <span class="food-category">${item.category}</span>
@@ -71,5 +62,4 @@ function renderMenu() {
     `).join('');
 }
 
-// Call function on load
 renderMenu();
