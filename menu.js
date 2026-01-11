@@ -31,6 +31,94 @@ const foodItems = [
         price: 12500,
         rating: 4.9,
         img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 5,
+        name: "Spicy Tuna Roll",
+        category: "Sushi",
+        price: 9000,
+        rating: 4.6,
+        img: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 6,
+        name: "Chicken Parmesan",
+        category: "Main Course",
+        price: 14500,
+        rating: 4.8,
+        img: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 7,
+        name: "Margherita Pizza",
+        category: "Pizza",
+        price: 11000,
+        rating: 4.7,
+        img: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 8,
+        name: "Chocolate Lava Cake",
+        category: "Dessert",
+        price: 6500,
+        rating: 4.9,
+        img: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 9,
+        name: "Grilled Salmon",
+        category: "Healthy",
+        price: 22000,
+        rating: 4.8,
+        img: "https://images.unsplash.com/photo-1519708227418-c8fd9a3a2750?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 10,
+        name: "Lobster Bisque",
+        category: "Soup",
+        price: 16000,
+        rating: 4.7,
+        img: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 11,
+        name: "Smokey Jollof Rice",
+        category: "Nigerian",
+        price: 8500,
+        rating: 5.0,
+        img: "https://images.unsplash.com/photo-1596450514735-396264f5d983?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 12,
+        name: "Pounded Yam & Egusi",
+        category: "Nigerian",
+        price: 10500,
+        rating: 4.9,
+        img: "https://images.unsplash.com/photo-1643133277733-66a476a9f32e?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 13,
+        name: "Spicy Suya Platter",
+        category: "Nigerian",
+        price: 7000,
+        rating: 4.8,
+        img: "https://images.unsplash.com/photo-1603083544053-d30602334091?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 14,
+        name: "Fried Plantain (Dodo)",
+        category: "Sides",
+        price: 3000,
+        rating: 4.7,
+        img: "https://images.unsplash.com/photo-1643133277936-9f93d8792522?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 15,
+        name: "Pepper Soup (Goat)",
+        category: "Nigerian",
+        price: 9000,
+        rating: 4.8,
+        img: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80"
     }
 ];
 
