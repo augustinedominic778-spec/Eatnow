@@ -235,32 +235,3 @@ body {
     right: -10px;
     font-weight: bold;
 }
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .nav-links li {
-        margin: 0;
-    }
-
-    .nav-actions {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
