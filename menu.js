@@ -3,7 +3,7 @@ const foodItems = [
         id: 1,
         name: "Premium Ribeye Steak",
         category: "Main Course",
-        price: 34.00,
+        price: 28000,
         rating: 4.9,
         // Updated reliable link
         img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80"
@@ -12,7 +12,7 @@ const foodItems = [
         id: 2,
         name: "Truffle Tagliatelle",
         category: "Pasta",
-        price: 22.50,
+        price: 18000,
         rating: 4.8,
         img: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=800&q=80"
     },
@@ -20,7 +20,7 @@ const foodItems = [
         id: 3,
         name: "Mediterranean Salad",
         category: "Healthy",
-        price: 16.00,
+        price: 8500,
         rating: 4.7,
         img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
     },
@@ -28,7 +28,7 @@ const foodItems = [
         id: 4,
         name: "Classic Wagyu Burger",
         category: "Burgers",
-        price: 19.00,
+        price: 12500,
         rating: 4.9,
         img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
     }
@@ -41,7 +41,7 @@ function renderMenu() {
 
     grid.innerHTML = foodItems.map(item => `
         <div class="food-card">
-            <div class="price-tag"><span>$</span>${item.price.toFixed(2)}</div>
+            <div class="price-tag"><span>₦</span>${item.price.toLocaleString()}</div>
             <div class="image-container">
                 <img src="${item.img}" 
                      alt="${item.name}" 
