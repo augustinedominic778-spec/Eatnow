@@ -138,7 +138,7 @@
     width: 100%;
     padding: 12px;
     border: none;
-    background: #f6db29;
+    background: #edc80ced;
     color: #0b0b0b;
     font-weight: 600;
     border-radius: 12px;
@@ -150,9 +150,9 @@
     transition: var(--transition);
 }
 
-.order-btn:hover {
-    background: var(--primary-yellow);
-    color: #1a1a1a;
+.order-btn:hover, .order-btn:active {
+    background: #000;
+    color: #fff;
 }
 /* Placeholder background while image loads */
 .image-container {
