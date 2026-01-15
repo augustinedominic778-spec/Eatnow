@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Orders | EatNow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="logo">Eat<span>Now</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="orders.html" class="active">Orders</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="auth-group">
+                    <a href="login.html" class="btn-login">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="menu-container">
+        <h2 class="section-title">Your <span>Orders</span></h2>
+        <div style="text-align: center; padding: 50px;">
+            <i class="fas fa-receipt" style="font-size: 4rem; color: #ddd; margin-bottom: 20px;"></i>
+            <h3>No active orders</h3>
+            <p>Looks like you haven't ordered anything yet.</p>
+            <a href="menu.html" class="btn-primary" style="margin-top: 20px;">Browse Menu</a>
+        </div>
+    </section>
 </body>
 </html>

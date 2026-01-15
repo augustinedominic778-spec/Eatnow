@@ -5,8 +5,7 @@ const foodItems = [
         category: "Main Course",
         price: 28000,
         rating: 4.9,
-        // Updated reliable link
-        img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 2,
@@ -14,7 +13,7 @@ const foodItems = [
         category: "Pasta",
         price: 18000,
         rating: 4.8,
-        img: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1626844131082-256783844137?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 3,
@@ -22,7 +21,7 @@ const foodItems = [
         category: "Healthy",
         price: 8500,
         rating: 4.7,
-        img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 4,
@@ -54,7 +53,7 @@ const foodItems = [
         category: "Pizza",
         price: 11000,
         rating: 4.7,
-        img: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 8,
@@ -62,7 +61,7 @@ const foodItems = [
         category: "Dessert",
         price: 6500,
         rating: 4.9,
-        img: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476d?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 9,
@@ -70,7 +69,7 @@ const foodItems = [
         category: "Healthy",
         price: 22000,
         rating: 4.8,
-        img: "https://images.unsplash.com/photo-1519708227418-c8fd9a3a2750?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 10,
@@ -78,7 +77,7 @@ const foodItems = [
         category: "Soup",
         price: 16000,
         rating: 4.7,
-        img: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 11,
@@ -86,7 +85,7 @@ const foodItems = [
         category: "Nigerian",
         price: 8500,
         rating: 5.0,
-        img: "https://images.unsplash.com/photo-1596450514735-396264f5d983?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 12,
@@ -94,7 +93,7 @@ const foodItems = [
         category: "Nigerian",
         price: 10500,
         rating: 4.9,
-        img: "https://images.unsplash.com/photo-1643133277733-66a476a9f32e?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1643656123478-72726e301713?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 13,
@@ -102,7 +101,7 @@ const foodItems = [
         category: "Nigerian",
         price: 7000,
         rating: 4.8,
-        img: "https://images.unsplash.com/photo-1603083544053-d30602334091?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1593560708920-63984a6d605e?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 14,
@@ -110,7 +109,7 @@ const foodItems = [
         category: "Sides",
         price: 3000,
         rating: 4.7,
-        img: "https://images.unsplash.com/photo-1643133277936-9f93d8792522?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1603088549155-6ae9395b928f?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 15,
@@ -118,7 +117,15 @@ const foodItems = [
         category: "Nigerian",
         price: 9000,
         rating: 4.8,
-        img: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80"
+        img: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 16,
+        name: "Ofada Rice",
+        category: "Nigerian",
+        price: 12000,
+        rating: 4.9,
+        img: "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80"
     }
 ];
 
