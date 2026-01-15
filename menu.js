@@ -167,6 +167,15 @@ function addToCart(id) {
     if (item) {
         cart.push(item);
         localStorage.setItem('eatnow_cart', JSON.stringify(cart));
-        alert(`${item.name} has been added to your order!`);
+        showToast(`${item.name} has been added to your order!`);
+    }
+}
+
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    if (toast) {
+        toast.innerText = message;
+        toast.className = "toast show";
+        setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
     }
 }
