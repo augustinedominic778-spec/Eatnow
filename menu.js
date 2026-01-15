@@ -158,3 +158,15 @@ function renderMenu() {
 }
 
 renderMenu();
+
+function addToCart(id) {
+    // Get existing cart or initialize empty array
+    const cart = JSON.parse(localStorage.getItem('eatnow_cart')) || [];
+    const item = foodItems.find(product => product.id === id);
+    
+    if (item) {
+        cart.push(item);
+        localStorage.setItem('eatnow_cart', JSON.stringify(cart));
+        alert(`${item.name} has been added to your order!`);
+    }
+}

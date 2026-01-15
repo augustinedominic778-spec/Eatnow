@@ -26,12 +26,73 @@
 
     <section class="menu-container">
         <h2 class="section-title">Your <span>Orders</span></h2>
-        <div style="text-align: center; padding: 50px;">
+        
+        <!-- Empty State (Hidden by default, shown via JS if needed) -->
+        <div id="empty-cart" style="text-align: center; padding: 50px; display: none;">
             <i class="fas fa-receipt" style="font-size: 4rem; color: #ddd; margin-bottom: 20px;"></i>
             <h3>No active orders</h3>
             <p>Looks like you haven't ordered anything yet.</p>
             <a href="menu.html" class="btn-primary" style="margin-top: 20px;">Browse Menu</a>
         </div>
+
+        <!-- Order List Container -->
+        <div id="order-content" style="max-width: 800px; margin: 0 auto;">
+            <div id="order-items"></div>
+            
+            <div style="margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px; text-align: right;">
+                <h3>Total: <span id="total-price" style="color: #FFC107;">₦0</span></h3>
+                <button onclick="clearCart()" style="background: #ff4444; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Clear Cart</button>
+                <button style="background: #FFC107; color: black; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold;">Checkout</button>
+            </div>
+        </div>
     </section>
+
+    <script>
+        function loadOrders() {
+            const cart = JSON.parse(localStorage.getItem('eatnow_cart')) || [];
+            const emptyState = document.getElementById('empty-cart');
+            const orderContent = document.getElementById('order-content');
+            const orderItemsContainer = document.getElementById('order-items');
+            const totalPriceEl = document.getElementById('total-price');
+
+            if (cart.length === 0) {
+                emptyState.style.display = 'block';
+                orderContent.style.display = 'none';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            orderContent.style.display = 'block';
+            orderItemsContainer.innerHTML = '';
+            
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                const itemDiv = document.createElement('div');
+                itemDiv.style.cssText = "display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #eee; background: white; margin-bottom: 10px; border-radius: 8px;";
+                itemDiv.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="${item.img}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px;">
+                        <div>
+                            <h4 style="margin: 0;">${item.name}</h4>
+                            <p style="margin: 0; color: #888; font-size: 0.9rem;">${item.category}</p>
+                        </div>
+                    </div>
+                    <div style="font-weight: bold;">₦${item.price.toLocaleString()}</div>
+                `;
+                orderItemsContainer.appendChild(itemDiv);
+            });
+
+            totalPriceEl.innerText = '₦' + total.toLocaleString();
+        }
+
+        function clearCart() {
+            localStorage.removeItem('eatnow_cart');
+            loadOrders();
+        }
+
+        loadOrders();
+    </script>
 </body>
 </html>

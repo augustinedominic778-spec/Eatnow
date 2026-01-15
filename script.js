@@ -24,7 +24,8 @@ const foodItems = [
 
 const foodGrid = document.getElementById('food-grid');
 const cartCount = document.getElementById('cart-count');
-let count = 0;
+// Initialize count from saved cart
+let count = (JSON.parse(localStorage.getItem('eatnow_cart')) || []).length;
 
 // Function to display food items
 function displayMenu() {
@@ -44,10 +45,23 @@ function displayMenu() {
 }
 
 function addToCart(id) {
-    count++;
-    cartCount.innerText = count;
-    alert("Item added to cart!");
+    const cart = JSON.parse(localStorage.getItem('eatnow_cart')) || [];
+    const item = foodItems.find(product => product.id === id);
+    
+    if (item) {
+        cart.push(item);
+        localStorage.setItem('eatnow_cart', JSON.stringify(cart));
+        
+        count = cart.length;
+        if(cartCount) cartCount.innerText = count;
+        alert("Item added to cart!");
+    }
+}
+
+function toggleCart() {
+    window.location.href = 'orders.html';
 }
 
 // Initialize
+if(cartCount) cartCount.innerText = count;
 displayMenu();
