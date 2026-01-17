@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Orders | EatNow</title>
+    <title>Your Cart | EatNow</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -28,7 +28,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="orders.html" class="active">Orders</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
             </ul>
             <div class="nav-actions">
                 <div class="auth-group">
@@ -39,12 +39,12 @@
     </header>
 
     <section class="menu-container">
-        <h2 class="section-title">Your <span>Orders</span></h2>
+        <h2 class="section-title">Your <span>Cart</span></h2>
         
         <!-- Empty State (Hidden by default, shown via JS if needed) -->
         <div id="empty-cart" style="text-align: center; padding: 50px; display: none;">
             <i class="fas fa-receipt" style="font-size: 4rem; color: #ddd; margin-bottom: 20px;"></i>
-            <h3>No active orders</h3>
+            <h3>Empty Cart</h3>
             <p>Looks like you haven't ordered anything yet.</p>
             <a href="menu.html" class="btn-primary" style="margin-top: 20px;">Browse Menu</a>
         </div>
@@ -101,7 +101,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -118,7 +118,7 @@
     </footer>
 
     <script>
-        function loadOrders() {
+        function loadCart() {
             const cart = JSON.parse(localStorage.getItem('eatnow_cart')) || [];
             const emptyState = document.getElementById('empty-cart');
             const orderContent = document.getElementById('order-content');
@@ -162,14 +162,14 @@
 
         function clearCart() {
             localStorage.removeItem('eatnow_cart');
-            loadOrders();
+            loadCart();
         }
 
         function removeItem(index) {
             const cart = JSON.parse(localStorage.getItem('eatnow_cart')) || [];
             cart.splice(index, 1);
             localStorage.setItem('eatnow_cart', JSON.stringify(cart));
-            loadOrders();
+            loadCart();
         }
 
         function openCheckout() {
@@ -185,7 +185,7 @@
             showToast('Order placed successfully! We will contact you shortly.');
             localStorage.removeItem('eatnow_cart');
             closeCheckout();
-            loadOrders();
+            loadCart();
         }
 
         // Close modal if clicking outside
@@ -205,7 +205,7 @@
             }
         }
 
-        loadOrders();
+        loadCart();
     </script>
 </body>
 </html>
