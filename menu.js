@@ -150,7 +150,7 @@ function renderMenu() {
                     <i class="fas fa-star"></i> ${item.rating} (50+ reviews)
                 </div>
                 <button class="order-btn" onclick="addToCart(${item.id})">
-                    <i class="fas fa-plus"></i> Add to Order
+                    <i class="fas fa-plus"></i> Add to Cart
                 </button>
             </div>
         </div>
